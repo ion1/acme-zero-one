@@ -29,7 +29,8 @@ element. They satisfy the following axioms:
   For all dependencies `a`,
 
   ```
-  acme-one , a = a , acme-one = a
+  acme-one , a = a
+  a , acme-one = a
   ```
 
   Depending on [`acme-one`][acme-one] has no additional effect.
@@ -39,7 +40,8 @@ element. They satisfy the following axioms:
   For all dependencies `a`,
 
   ```
-  acme-zero , a = a , acme-zero = acme-zero
+  acme-zero , a = acme-zero
+  a , acme-zero = acme-zero
   ```
 
   Depending on [`acme-zero`][acme-zero] in addition has the same effect as

@@ -1,5 +1,5 @@
 name: acme-one
-version: 0.0.1
+version: 0.0.2
 synopsis: The identity element of package dependencies
 description:
   <https://www.haskell.org/cabal/users-guide/developing-packages.html Cabal>
@@ -30,7 +30,8 @@ description:
   For all dependencies @a@,
   .
   @
-  acme-one , a = a , acme-one = a
+  acme-one , a = a
+  a , acme-one = a
   @
   .
   Depending on @<https://hackage.haskell.org/package/acme-one acme-one>@ has no
@@ -41,7 +42,8 @@ description:
   For all dependencies @a@,
   .
   @
-  acme-zero , a = a , acme-zero = acme-zero
+  acme-zero , a = acme-zero
+  a , acme-zero = acme-zero
   @
   .
   Depending on @<https://hackage.haskell.org/package/acme-zero acme-zero>@ in
